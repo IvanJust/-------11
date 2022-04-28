@@ -1,4 +1,6 @@
+console.log("Задание 1");
 const items = ["items", "apple", "items", "orange", "items", "apple"];
+console.log(items);
 let mo = items[0];
     let n = 0;
 function FindItem(item){
@@ -8,7 +10,7 @@ function FindItem(item){
             map[items[i]]=1;
         }else{
             ++map[items[i]];
-            console.log(map[items[i]])
+            //console.log(map[items[i]])
             if(map[items[i]]>map[mo]){
                 mo = items[i];
             }

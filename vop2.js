@@ -1,17 +1,30 @@
-
-var num = [100, 42, 51, 8, 91, 4, 13, 29, 61];
-var clon = Object.assign([], num);
+console.log("Задание 3");
+let num = [100, 42, 51, 8, 91, 4, 13, 29, 61];
+// function copy(clonn, numb){ for(let i in numb){clonn[i] = numb[i]}}
+// let clon = [];
 function prov(numb){
-    if(numb == clon.sort(function(a, b){ return a - b})){
-        console.log("«yes, ascending")
-    } else if(numb == clon.sort(function(a, b) { return b - a })){
-        console.log("«yes, descending")
-    } else{
-        console.log("no")
-    }
+    let ii=0, ii2=0;
+    for(let i in numb){ if(numb[i] > numb[i-1]){ii++}}
+    for(let i in numb){ if(numb[i] < numb[i-1]){ii2++}}
+    if(ii == numb.length - 1){ return console.log("«yes, ascending") }
+    else if(ii2 == numb.length - 1){ return console.log("«yes, descending") }
+    else {return console.log("no")}
 }
+// function prov(numb, clonn){
+//     if(prov2(numb, clonn) = 1){
+//         console.log("«yes, ascending")
+//     } else if(numb = clon.sort(function(a, b){return b - a})){
+//         console.log("«yes, descending")
+//     } else{
+//         console.log("no")
+//     }
+// }
+// copy(clon, num);
+console.log(num);
 prov(num);
-num.sort(function(a, b){ return a - b});
+num.sort(function(a, b){return a - b});
+console.log(num);
 prov(num);
-num.sort(function(a, b){ return b - a});
+num.sort(function(a, b){return b - a});
+console.log(num);
 prov(num);
