@@ -15,3 +15,7 @@ function strUpAndDown(str){
         console.log(`Больше прописных(${str.length}): `, str) }
 } 
 strUpAndDown(Str);
+Str += "UP";
+strUpAndDown(Str);
+Str += "down";
+strUpAndDown(Str);
